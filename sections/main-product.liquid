@@ -269,9 +269,9 @@ document.addEventListener('DOMContentLoaded', () => {
           {% endcase %}
       
           {% assign block_class = color_class | append: '_' | append: karat_class %}
-      
           <div class="block {{ block_class }}" style="display: none;">
             <div class="product__title">
+              <!-- product title coming from metadata variant.metafields.custom.title | default: variant.title & variant.metafields.custom.description | default: "No description available. -->
               <h1 class="h1">{{ variant.metafields.custom.title | default: variant.title }}</h1>
             </div>
             <div class="product__description rte quick-add-hidden default-infos">
